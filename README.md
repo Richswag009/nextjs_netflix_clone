@@ -27,7 +27,7 @@ some of the functionlitie of the app includes: a user can search for its favorit
 
 # Usage
  - git clone 
- -cd netflix-clone
+ - cd netflix-clone
  - npm install
  
  
