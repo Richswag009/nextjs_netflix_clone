@@ -6,7 +6,7 @@ module.exports = {
       "upload.wikimedia.orgclear",
       "image.tmdb.org",
       "occ-0-1190-2774.1.nflxso.net",
-      "image.tmbd.org/t/p/w500",
+      "image.tmbd.org",
     ],
   },
   reactStrictMode: true,
