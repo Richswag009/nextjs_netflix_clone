@@ -2,7 +2,7 @@ import React from "react";
 import { Movie } from "../../../typing";
 import { imageUrl } from "../../../Utils/request";
 import Image from "next/image";
-// https://image.tmbd.org/t/p/w500/
+// const thumbnailUrl = 'https://image.tmbd.org/t/p/w500
 interface Props {
   movie: Movie;
   //   movie: Movie | DocumentData;
@@ -11,7 +11,11 @@ const Thumbnail = ({ movie }: Props) => {
   return (
     <div className=" ">
       <Image
-        src={`${imageUrl}${movie.poster_path || movie?.backdrop_path} `}
+        src={
+          movie?.backdrop_path || movie?.poster_path
+            ? ` ${imageUrl}${movie?.backdrop_path || movie?.poster_path}`
+            : ""
+        }
         alt=""
         width={400}
         height={400}

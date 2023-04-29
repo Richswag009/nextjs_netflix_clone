@@ -20,13 +20,18 @@ const Banner = ({ netflixOrginals }: Props) => {
     <div className="flex flex-col  space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
       <div className="absolute  -z-30 top-0 left-0 h-[95] ">
         <Image
-          src={`${imageUrl}${movie?.backdrop_path || movie?.poster_path} `}
-          alt={`${imageUrl}${movie?.backdrop_path || movie?.poster_path} `}
+          src={
+            movie?.backdrop_path || movie?.poster_path
+              ? ` ${imageUrl}${movie?.backdrop_path || movie?.poster_path}`
+              : ""
+          }
+          alt={`${movie?.name || movie?.title} `}
           width={400}
           height={400}
           className="w-screen h-[95vh] object-cover"
         />
       </div>
+      {/* {console.log(movie.backdrop_path)} */}
 
       <h1 className="font-bold text-white text-2xl lg:text-6xl md:text-4xl ">
         {movie?.title || movie?.name}
